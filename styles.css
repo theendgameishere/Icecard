@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #ffffff;
-    --secondary-color: #f0f0f0;
-    --accent-color: #007bff;
-    /* Changed default text color to white for readability on the background image */
-    --text-color: #ffffff; 
-    --card-bg-color: rgba(0, 0, 0, 0.4); /* Made cards slightly darker for better contrast */
-    --card-hover-bg-color: rgba(0, 0, 0, 0.6);
+    --bg-color: #111111;
+    --card-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --primary-color: #007bff;
+    --icon-gradient: linear-gradient(135deg, #007bff, #8a2be2);
 }
 
 * {
@@ -21,228 +19,155 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #111; /* Fallback background for areas beyond the hero image */
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
     color: var(--text-color);
 }
 
 /* Hero Section */
 .hero-section {
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1557683316-9ca4a3b8e7b3?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
-    background-attachment: fixed; /* --- CHANGE: This is the key change to fix the background image --- */
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--primary-color);
-    position: relative;
-}
-
-.hero-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1; /* Placed behind content */
-}
-
-.hero-content {
-    z-index: 1;
+    padding: 0 20px;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added shadow for readability */
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1.25rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added shadow for readability */
+    color: #a0a0a0;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    padding: 14px 28px;
+    background-color: var(--primary-color);
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cta-button:hover {
+    transform: translateY(-3px);
     background-color: #0056b3;
-    transform: translateY(-2px);
 }
 
-/* Content Sections */
+/* Content & Cards */
 .content-section {
-    padding: 80px 20px;
-    background-color: transparent; /* --- CHANGE: Removed solid background to let hero image show through --- */
+    padding: 100px 20px;
 }
 
 .section-container {
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
     text-align: center;
 }
 
-.content-section h2 {
+.section-container h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added shadow for readability */
 }
 
-.content-section p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added shadow for readability */
+.section-container > p {
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+    color: #a0a0a0;
 }
 
-/* Information Cards */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px; /* --- CHANGE: Increased gap to add more space between cards --- */
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
 }
 
 .info-card {
-    background: var(--card-bg-color);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
+    background-color: var(--card-color);
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
     padding: 30px;
-    text-align: left;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--primary-color); /* Ensuring card text is white */
-}
-
-.info-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.info-card p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    text-shadow: none; /* No shadow needed on card text */
-}
-
-.card-cta {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 600;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .info-card:hover {
-    background-color: var(--card-hover-bg-color);
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
 }
 
-/* Contact Form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 2rem auto 0 auto;
+.info-card h3 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
+.info-card p {
+    margin-top: 0.5rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+/* Custom Icon Styling */
+.icon-wrapper {
+    display: inline-flex;
+    padding: 15px;
+    border-radius: 50%;
+    background: var(--icon-gradient);
+}
+
+.custom-icon {
+    width: 30px;
+    height: 30px;
+    stroke: white;
+    stroke-width: 1.5;
+}
+
+/* Image Section */
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 /* Footer */
 footer {
-    background-color: #222;
-    color: var(--primary-color);
     text-align: center;
     padding: 40px 20px;
-}
-
-.social-media {
-    margin-bottom: 1rem;
-}
-
-.social-icon {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    filter: invert(1);
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.2);
-    filter: invert(0.8) sepia(1) saturate(5) hue-rotate(170deg); /* Accent color on hover */
+    color: #555;
 }
 
 /* Animations */
-.fade-in {
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-.scroll-fade-in {
+.scroll-animate {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.scroll-fade-in.visible {
+.scroll-animate.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* Mobile-First Responsive Design */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-
-    .content-section {
-        padding: 60px 20px;
-    }
-
-    .content-section h2 {
-        font-size: 2rem;
-    }
-
-    /* On mobile, fixed backgrounds can be jittery, so we revert to scroll */
-    .hero-section {
-        background-attachment: scroll;
-    }
+    .hero-content h1 { font-size: 2.5rem; }
+    .section-container h2 { font-size: 2rem; }
 }
