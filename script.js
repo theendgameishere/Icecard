@@ -1,87 +1,74 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- Smooth Scrolling for Navigation Links ---
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // --- Scroll-Triggered Animations ---
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Optional: Unobserve after animation to save resources
-                // observer.unobserve(entry.target); 
-            }
-        });
-    }, {
-        threshold: 0.1 // Trigger when 10% of the element is visible
-    });
-
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
-
-    // --- Image Lazy Loading ---
-    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-
-    if ('IntersectionObserver' in window) {
-        const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const lazyImage = entry.target;
-                    // The 'src' is already set, the browser handles it natively
-                    // You could add custom logic here if needed
-                    lazyImageObserver.unobserve(lazyImage);
-                }
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
+    });
 
-        lazyImages.forEach(lazyImage => {
-            lazyImageObserver.observe(lazyImage);
+    // Scroll-triggered animations for content sections
+    const scrollElements = document.querySelectorAll('.scroll-fade-in');
+
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('visible');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('visible');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
         });
-    }
+    };
 
-    // --- Interactive Card Functionality for Mobile (if needed) ---
-    // This example uses hover for desktop. For mobile, a tap can expand content.
-    // The current design is simple, but this is where you'd add "tappable" logic.
-    const cards = document.querySelectorAll('.info-card');
+    window.addEventListener('scroll', handleScrollAnimation);
+    handleScrollAnimation(); // Initial check on page load
 
-    cards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            // On mobile, this click event can be used to show more details
-            // For this design, we'll just let the link handle the action.
-            const cta = this.querySelector('.card-cta');
-            if (cta && e.target !== cta) {
-                // If the user didn't click the link directly, we can trigger it.
-                // cta.click(); 
+    // Lazy loading for images
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                lazyImageObserver.unobserve(img);
             }
         });
     });
 
-    // --- Contact Form Submission (Placeholder) ---
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Here you would integrate with an email service like EmailJS, Formspree,
-        // or a custom backend endpoint.
-        alert('Thank you for your message! Form submission is currently a placeholder.');
-        this.reset();
+    lazyImages.forEach(img => {
+        lazyImageObserver.observe(img);
     });
+
+    // Interactive cards for mobile (tappable)
+    if (window.innerWidth <= 768) {
+        const cards = document.querySelectorAll('.info-card');
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Example of expanding content - for a real app, you might toggle a class
+                // that changes the card's height and reveals more text.
+                // For this example, we'll just log to the console.
+                console.log('Card tapped:', this.querySelector('h3').innerText);
+            });
+        });
+    }
 
 });
