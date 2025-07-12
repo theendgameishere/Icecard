@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-cms-id="page_title">About The Sarcastic Circus | Human-AI Digital Wizardry</title>
+    <meta name="description" content="Discover the story of The Sarcastic Circus, where human creativity meets AI wizardry to deliver absurdly brilliant web development and AI solutions.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 data-cms-id="main_title">Our Story: Where Strategy Meets AI</h1>
+
+        <!-- Mission & Vision Section -->
+        <section id="mission-vision" data-aos="fade-up">
+            <h2 data-cms-id="mission_title">Mission & Vision</h2>
+            <p data-cms-id="mission_text">We started this circus because the digital world was too boring. Our mission? To inject chaos, creativity, and a touch of AI-fueled madness into every project. Our vision is a world where websites don’t suck, apps don’t crash, and AI doesn’t scare people (unless they deserve it).</p>
+            <img data-cms-id="mission_image" src="placeholder.jpg" alt="Circus tent with glowing code">
+        </section>
+
+        <!-- Our Philosophy Section -->
+        <section id="philosophy" data-aos="fade-up">
+            <h2 data-cms-id="philosophy_title">Our Philosophy</h2>
+            <p data-cms-id="philosophy_text">We believe in the power of humans and machines working together—like a ringmaster and a lion, but with less roaring and more coding. Our philosophy is simple: overdeliver with style, sass, and a sprinkle of absurdity. Why be normal when you can be spectacular?</p>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section id="meet-team" data-aos="fade-up">
+            <h2 data-cms-id="team_title">Meet the Team</h2>
+            <div class="team-grid">
+                <article class="team-member">
+                    <img data-cms-id="team_image_1" src="placeholder.jpg" alt="Ringmaster Bob in tech gear">
+                    <h3 data-cms-id="team_name_1">Ringmaster Bob</h3>
+                    <p data-cms-id="team_bio_1">The guy who claims he invented Wi-Fi. Spoiler: he didn’t. But he’s a genius at turning coffee into code.</p>
+                </article>
+                <article class="team-member">
+                    <img data-cms-id="team_image_2" src="placeholder.jpg" alt="Clown Cassandra with a laptop">
+                    <h3 data-cms-id="team_name_2">Clown Cassandra</h3>
+                    <p data-cms-id="team_bio_2">Our AI whisperer. She talks to chatbots like they’re her pets and makes them obey (mostly).</p>
+                </article>
+                <article class="team-member">
+                    <img data-cms-id="team_image_3" src="placeholder.jpg" alt="Juggler Jamie coding">
+                    <h3 data-cms-id="team_name_3">Juggler Jamie</h3>
+                    <p data-cms-id="team_bio_3">Juggles deadlines, code, and existential crises. Also makes killer memes.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#"><img src="twitter-icon.svg" alt="Stalk us on Twitter"></a>
+            <a href="#"><img src="facebook-icon.svg" alt="Like us on Facebook"></a>
+            <a href="#"><img src="instagram-icon.svg" alt="Spy on us on Instagram"></a>
+        </div>
+        <p data-cms-id="footer_disclaimer">Warning: Prolonged exposure to our site may cause laughter, creativity, and an urge to hire us. Proceed with caution.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
