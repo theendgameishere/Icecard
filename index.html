@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sarcastic Circus</title>
+    <title data-cms-id="page_title">The Sarcastic Circus | Digital Big Top</title>
+    <meta name="description" content="Welcome to The Sarcastic Circus, where absurdly brilliant web design, apps, chatbots, and AI consulting make your digital dreams a reality.">
     <link rel="stylesheet" href="styles.css">
-    <!-- Optional: Include AOS library for scroll animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +30,7 @@
         </section>
 
         <!-- Services Preview: Showcasing 4 core services with sarcastic flair -->
-        <section id="services-preview">
+        <section id="services-preview" data-aos="fade-up">
             <h2 data-cms-id="services_title">Our Spectacular Services</h2>
             <div class="services-grid">
                 <!-- Web Design -->
@@ -74,19 +74,20 @@
                 <article class="service-card">
                     <svg data-cms-id="service_icon_4" width="100" height="100" viewBox="0 0 100 100">
                         <!-- Fortune teller: Symbolizes insight -->
-                        <circle cx="50" cy="50" r="20" fill="none" stroke="black" stroke-width="2"/>
-                        <path d="M40 60 Q50 70 60 60" stroke="black" stroke-width="2" fill="none"/>
-                    </svg>
-                    <h3 data-cms-id="service_title_4">AI Consultation</h3>
-                    <p data-cms-id="service_description_4">We’ll teach you to harness AI so you can automate pesky tasks and focus on what matters: binge-watching cat videos.</p>
+                        <circle cx="50 Ascending(1)'>
+                    <circle cx="50" cy="50" r="20" fill="none" stroke="black" stroke-width="2"/>
+                    <path d="M40 60 Q50 70 60 60" stroke="black" stroke-width="2" fill="none"/>
+                </svg>
+                <h3 data-cms-id="service_title_4">AI Consultation</h3>
+                <p data-cms-id="service_description_4">We’ll teach you to harness AI so you can automate pesky tasks and focus on what matters: binge-watching cat videos.</p>
                 </article>
             </div>
         </section>
 
         <!-- About Preview: Quirky and chaotic -->
-        <section id="about-preview">
+        <section id="about-preview" data-aos="fade-up">
             <div class="about-content">
-                <img data-cms-id="about_image" src="placeholder.jpg" alt="Team in circus costumes">
+                <img data-cms-id="about_image" src="https://images.unsplash.com/photo-1507216698-4f3eabcd2b72" alt="Team in circus costumes">
                 <div class="about-text">
                     <h2 data-cms-id="about_title">About Us</h2>
                     <p data-cms-id="about_description">We’re not your average web agency. Think of us as misfit geniuses who turned the digital world into our playground. Our team includes ex-circus performers, caffeine addicts, and one guy who claims he invented the internet (still verifying that).</p>
@@ -95,20 +96,20 @@
         </section>
 
         <!-- CTA Banner: Bold and inviting -->
-        <section id="cta-banner">
+        <section id="cta-banner" data-aos="fade-up">
             <h2 data-cms-id="cta_title">Don’t Be a Spectator, Join the Show</h2>
             <p data-cms-id="cta_description">Contact us now and let’s create some digital magic. Or just send us a meme. We’re cool with that too.</p>
-            <a href="#" data-cms-id="cta_button">Step Into the Ring</a>
+            <a href="contact.html" data-cms-id="cta_button" class="nav-link">Step Into the Ring</a>
         </section>
     </main>
 
     <footer>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
         <div class="social-media">
@@ -120,7 +121,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <!-- Optional: AOS script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
