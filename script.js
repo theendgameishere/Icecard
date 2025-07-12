@@ -1,75 +1,73 @@
-// ===== AOS (Animate On Scroll) Initialisation =====
-document.addEventListener('DOMContentLoaded', () => {
-  AOS.init({
+// Block 1: Interactivity & Animations
+
+// Initialize AOS for scroll animations
+AOS.init({
     duration: 800,
-    once: true
-  });
-
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Sticky header background toggle
-  const nav = document.getElementById('main-nav');
-  const hero = document.getElementById('hero');
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
-      });
-    },
-    { threshold: 0 }
-  );
-  observer.observe(hero);
-
-  // Fetch & render CMS content demo
-  fetchAndRenderContent();
+    once: true,
 });
 
-// ===== CMS Data Fetching Demo =====
-async function fetchAndRenderContent() {
-  /* Replace the URL below with your CMS endpoint
-  const res = await fetch('https://your-cms.com/api/content');
-  const data = await res.json();
-  */
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-  // Demo data for illustration purposes
-  const data = {
-    hero_title: 'Amplify Your Digital Presence',
-    hero_subtitle: 'We craft highâ€‘impact websites and AI-powered solutions that resonate.',
-    hero_cta_text: 'Start Your Project',
-    services_heading: 'Our Core Services',
-    service1_title: 'Innovation',
-    service1_desc: 'Cuttingâ€‘edge design & AI automation.',
-    service2_title: 'Strategy',
-    service2_desc: 'Dataâ€‘driven roadmaps that win markets.',
-    service3_title: 'Results',
-    service3_desc: 'Tangible growth & measurable ROI.',
-    about_heading: 'Who We Are',
-    about_text: 'Echo Agency is a collective of designers, strategists, and engineers amplifying brands through elite digital experiences.',
-    cta_heading: 'Ready to Echo Across the Web?',
-    cta_button_text: 'Book a Free Consult',
-    copyright_year: '2025'
-  };
-
-  for (const [key, value] of Object.entries(data)) {
-    const el = document.querySelector(`[data-cms-id="${key}"]`);
-    if (el) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.value = value;
-      } else {
-        el.textContent = value;
-      }
+// Sticky header effect
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const heroHeight = document.querySelector('#hero').offsetHeight;
+    if (window.scrollY > heroHeight) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
     }
-  }
+});
+
+// Block 2: Headless CMS Data Fetching (Example)
+async function fetchAndRenderContent() {
+    // Example fetch from a Headless CMS (uncomment and adjust for real endpoint)
+    // const response = await fetch('https://api.sanity.io/v1/data/query/production?query=*[_type=="homepage"]');
+    // const data = await response.json();
+    // const content = data.result[0];
+
+    // Mock JSON data for demonstration
+    const data = {
+        hero_title: "Step Right Up to the Digital Big Top",
+        hero_subtitle: "Where we turn your wildest web dreams into reality (and occasionally into nightmares, but only if you ask nicely).",
+        services_title: "Our Spectacular Services",
+        service_title_1: "Web Design",
+        service_description_1: "Our web designs are so stunning, they’ll make your visitors question their life choices. But in a good way.",
+        service_title_2: "Web Apps",
+        service_description_2: "We build web apps so intuitive, even your grandma could use them (no offense to grandmas, they’re great).",
+        service_title_3: "Chatbots",
+        service_description_3: "Our chatbots are so lifelike, you’ll swear they’re sentient. Don’t worry, they’re not plotting world domination... yet.",
+        service_title_4: "AI Consultation",
+        service_description_4: "We’ll teach you to harness AI so you can automate pesky tasks and focus on what matters: binge-watching cat videos.",
+        about_title: "About Us",
+        about_description: "We’re not your average web agency. Think of us as misfit geniuses who turned the digital world into our playground. Our team includes ex-circus performers, caffeine addicts, and one guy who claims he invented the internet (still verifying that).",
+        about_image: "team-circus.jpg",
+        cta_title: "Don’t Be a Spectator, Join the Show",
+        cta_description: "Contact us now and let’s create some digital magic. Or just send us a meme. We’re cool with that too.",
+        cta_button: "Step Into the Ring",
+        footer_disclaimer: "Warning: Prolonged exposure to our site may cause laughter, creativity, and an urge to hire us. Proceed with caution."
+    };
+
+    // Populate content using data-cms-id attributes
+    document.querySelectorAll('[data-cms-id]').forEach(element => {
+        const id = element.getAttribute('data-cms-id');
+        if (data[id]) {
+            if (element.tagName === 'IMG') {
+                element.src = data[id];
+            } else {
+                element.textContent = data[id];
+            }
+        }
+    });
 }
+
+// Execute the function on page load
+fetchAndRenderContent();
