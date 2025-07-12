@@ -1,96 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-cms-id="meta_title">Echo Agency – Digital Excellence</title>
-  <link rel="stylesheet" href="echo_agency_styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sarcastic Circus</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Optional: Include AOS library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav id="main-nav">
-      <div class="logo" data-cms-id="logo_text">Echo Agency</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about-preview">About</a></li>
-        <li><a href="#services-preview">Services</a></li>
-        <li><a href="#cta-banner">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero">
-      <div class="hero-content" data-aos="fade-up">
-        <h1 data-cms-id="hero_title">Amplify Your Digital Presence</h1>
-        <p data-cms-id="hero_subtitle">We craft high‑impact websites and AI-powered solutions that resonate.</p>
-        <a href="#cta-banner" class="btn-primary" data-cms-id="hero_cta_text">Start Your Project</a>
-      </div>
-    </section>
+    <main>
+        <!-- Hero Section: Dramatic and absurd -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1 data-cms-id="hero_title">Step Right Up to the Digital Big Top</h1>
+                <p data-cms-id="hero_subtitle">Where we turn your wildest web dreams into reality (and occasionally into nightmares, but only if you ask nicely).</p>
+            </div>
+        </section>
 
-    <!-- Services Preview -->
-    <section id="services-preview">
-      <h2 class="section-heading" data-cms-id="services_heading">Our Core Services</h2>
-      <div class="service-cards">
-        <article class="service-card" data-cms-id="service1">
-          <!-- Innovation SVG Icon -->
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v4"></path>
-            <path d="M12 18v4"></path>
-            <path d="M4.93 4.93l2.83 2.83"></path>
-            <path d="M16.24 16.24l2.83 2.83"></path>
-            <path d="M2 12h4"></path>
-            <path d="M18 12h4"></path>
-            <path d="M4.93 19.07l2.83-2.83"></path>
-            <path d="M16.24 7.76l2.83-2.83"></path>
-            <circle cx="12" cy="12" r="3"></circle>
-          </svg>
-          <h3 data-cms-id="service1_title">Innovation</h3>
-          <p data-cms-id="service1_desc">Cutting‑edge design & AI automation.</p>
-        </article>
-        <article class="service-card" data-cms-id="service2">
-          <!-- Strategy SVG Icon -->
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 3h18v6H3z"></path>
-            <path d="M3 15h18v6H3z"></path>
-            <path d="M3 9l18 6"></path>
-          </svg>
-          <h3 data-cms-id="service2_title">Strategy</h3>
-          <p data-cms-id="service2_desc">Data‑driven roadmaps that win markets.</p>
-        </article>
-        <article class="service-card" data-cms-id="service3">
-          <!-- Results SVG Icon -->
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="3 17 9 11 13 15 21 7"></polyline>
-            <polyline points="14 7 21 7 21 14"></polyline>
-          </svg>
-          <h3 data-cms-id="service3_title">Results</h3>
-          <p data-cms-id="service3_desc">Tangible growth & measurable ROI.</p>
-        </article>
-      </div>
-    </section>
+        <!-- Services Preview: Showcasing 4 core services with sarcastic flair -->
+        <section id="services-preview">
+            <h2 data-cms-id="services_title">Our Spectacular Services</h2>
+            <div class="services-grid">
+                <!-- Web Design -->
+                <article class="service-card">
+                    <svg data-cms-id="service_icon_1" width="100" height="100" viewBox="0 0 100 100">
+                        <!-- Tightrope walker: Symbolizes balance and precision -->
+                        <line x1="0" y1="80" x2="100" y2="80" stroke="black" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="10" fill="black"/>
+                        <line x1="50" y1="60" x2="50" y2="80" stroke="black" stroke-width="2"/>
+                        <line x1="50" y1="60" x2="40" y2="70" stroke="black" stroke-width="2"/>
+                        <line x1="50" y1="60" x2="60" y2="70" stroke="black" stroke-width="2"/>
+                    </svg>
+                    <h3 data-cms-id="service_title_1">Web Design</h3>
+                    <p data-cms-id="service_description_1">Our web designs are so stunning, they’ll make your visitors question their life choices. But in a good way.</p>
+                </article>
+                <!-- Web Apps -->
+                <article class="service-card">
+                    <svg data-cms-id="service_icon_2" width="100" height="100" viewBox="0 0 100 100">
+                        <!-- Juggler: Symbolizes multitasking -->
+                        <circle cx="50" cy="50" r="10" fill="black"/>
+                        <line x1="50" y1="60" x2="50" y2="80" stroke="black" stroke-width="2"/>
+                        <circle cx="40" cy="30" r="5" fill="black"/>
+                        <circle cx="60" cy="30" r="5" fill="black"/>
+                        <circle cx="50" cy="20" r="5" fill="black"/>
+                    </svg>
+                    <h3 data-cms-id="service_title_2">Web Apps</h3>
+                    <p data-cms-id="service_description_2">We build web apps so intuitive, even your grandma could use them (no offense to grandmas, they’re great).</p>
+                </article>
+                <!-- Chatbots -->
+                <article class="service-card">
+                    <svg data-cms-id="service_icon_3" width="100" height="100" viewBox="0 0 100 100">
+                        <!-- Ventriloquist dummy: Symbolizes conversation -->
+                        <rect x="40" y="40" width="20" height="20" fill="black"/>
+                        <line x1="50" y1="60" x2="50" y2="70" stroke="black" stroke-width="2"/>
+                        <line x1="40" y1="70" x2="60" y2="70" stroke="black" stroke-width="2"/>
+                    </svg>
+                    <h3 data-cms-id="service_title_3">Chatbots</h3>
+                    <p data-cms-id="service_description_3">Our chatbots are so lifelike, you’ll swear they’re sentient. Don’t worry, they’re not plotting world domination... yet.</p>
+                </article>
+                <!-- AI Consultation -->
+                <article class="service-card">
+                    <svg data-cms-id="service_icon_4" width="100" height="100" viewBox="0 0 100 100">
+                        <!-- Fortune teller: Symbolizes insight -->
+                        <circle cx="50" cy="50" r="20" fill="none" stroke="black" stroke-width="2"/>
+                        <path d="M40 60 Q50 70 60 60" stroke="black" stroke-width="2" fill="none"/>
+                    </svg>
+                    <h3 data-cms-id="service_title_4">AI Consultation</h3>
+                    <p data-cms-id="service_description_4">We’ll teach you to harness AI so you can automate pesky tasks and focus on what matters: binge-watching cat videos.</p>
+                </article>
+            </div>
+        </section>
 
-    <!-- About Preview -->
-    <section id="about-preview">
-      <h2 class="section-heading" data-cms-id="about_heading">Who We Are</h2>
-      <p data-cms-id="about_text">Echo Agency is a collective of designers, strategists, and engineers amplifying brands through elite digital experiences.</p>
-    </section>
+        <!-- About Preview: Quirky and chaotic -->
+        <section id="about-preview">
+            <div class="about-content">
+                <img data-cms-id="about_image" src="placeholder.jpg" alt="Team in circus costumes">
+                <div class="about-text">
+                    <h2 data-cms-id="about_title">About Us</h2>
+                    <p data-cms-id="about_description">We’re not your average web agency. Think of us as misfit geniuses who turned the digital world into our playground. Our team includes ex-circus performers, caffeine addicts, and one guy who claims he invented the internet (still verifying that).</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- CTA Banner -->
-    <section id="cta-banner">
-      <h2 data-cms-id="cta_heading">Ready to Echo Across the Web?</h2>
-      <a href="mailto:hello@echoagency.io" class="btn-secondary" data-cms-id="cta_button_text">Book a Free Consult</a>
-    </section>
-  </main>
+        <!-- CTA Banner: Bold and inviting -->
+        <section id="cta-banner">
+            <h2 data-cms-id="cta_title">Don’t Be a Spectator, Join the Show</h2>
+            <p data-cms-id="cta_description">Contact us now and let’s create some digital magic. Or just send us a meme. We’re cool with that too.</p>
+            <a href="#" data-cms-id="cta_button">Step Into the Ring</a>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; <span data-cms-id="copyright_year">2025</span> Echo Agency. All rights reserved.</p>
-  </footer>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#"><img src="twitter-icon.svg" alt="Stalk us on Twitter"></a>
+            <a href="#"><img src="facebook-icon.svg" alt="Like us on Facebook"></a>
+            <a href="#"><img src="instagram-icon.svg" alt="Spy on us on Instagram"></a>
+        </div>
+        <p data-cms-id="footer_disclaimer">Warning: Prolonged exposure to our site may cause laughter, creativity, and an urge to hire us. Proceed with caution.</p>
+    </footer>
 
-  <script src="echo_agency_script.js"></script>
+    <script src="script.js"></script>
+    <!-- Optional: AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
