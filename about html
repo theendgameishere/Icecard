@@ -12,10 +12,10 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +27,7 @@
         <section id="mission-vision" data-aos="fade-up">
             <h2 data-cms-id="mission_title">Mission & Vision</h2>
             <p data-cms-id="mission_text">We started this circus because the digital world was too boring. Our mission? To inject chaos, creativity, and a touch of AI-fueled madness into every project. Our vision is a world where websites don’t suck, apps don’t crash, and AI doesn’t scare people (unless they deserve it).</p>
-            <img data-cms-id="mission_image" src="placeholder.jpg" alt="Circus tent with glowing code">
+            <img data-cms-id="mission_image" src="https://images.unsplash.com/photo-1517456215142-6d53b0a3e0bc" alt="Circus tent with glowing code">
         </section>
 
         <!-- Our Philosophy Section -->
@@ -41,17 +41,17 @@
             <h2 data-cms-id="team_title">Meet the Team</h2>
             <div class="team-grid">
                 <article class="team-member">
-                    <img data-cms-id="team_image_1" src="placeholder.jpg" alt="Ringmaster Bob in tech gear">
+                    <img data-cms-id="team_image_1" src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="Ringmaster Bob in tech gear">
                     <h3 data-cms-id="team_name_1">Ringmaster Bob</h3>
                     <p data-cms-id="team_bio_1">The guy who claims he invented Wi-Fi. Spoiler: he didn’t. But he’s a genius at turning coffee into code.</p>
                 </article>
                 <article class="team-member">
-                    <img data-cms-id="team_image_2" src="placeholder.jpg" alt="Clown Cassandra with a laptop">
+                    <img data-cms-id="team_image_2" src="https://images.unsplash.com/photo-1523464801710-33f9751b7289" alt="Clown Cassandra with a laptop">
                     <h3 data-cms-id="team_name_2">Clown Cassandra</h3>
                     <p data-cms-id="team_bio_2">Our AI whisperer. She talks to chatbots like they’re her pets and makes them obey (mostly).</p>
                 </article>
                 <article class="team-member">
-                    <img data-cms-id="team_image_3" src="placeholder.jpg" alt="Juggler Jamie coding">
+                    <img data-cms-id="team_image_3" src="https://images.unsplash.com/photo-1511551203521-1d70bb3b36b7" alt="Juggler Jamie coding">
                     <h3 data-cms-id="team_name_3">Juggler Jamie</h3>
                     <p data-cms-id="team_bio_3">Juggles deadlines, code, and existential crises. Also makes killer memes.</p>
                 </article>
@@ -62,10 +62,10 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
         <div class="social-media">
