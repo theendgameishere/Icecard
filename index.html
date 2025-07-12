@@ -1,67 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A top-of-the-line static site featuring modern design and animations.">
-    <title>Echo Agency | Modern Static Showcase</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-cms-id="meta_title">Echo Agency – Digital Excellence</title>
+  <link rel="stylesheet" href="echo_agency_styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 <body>
+  <header>
+    <nav id="main-nav">
+      <div class="logo" data-cms-id="logo_text">Echo Agency</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about-preview">About</a></li>
+        <li><a href="#services-preview">Services</a></li>
+        <li><a href="#cta-banner">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header class="hero-section">
-        <div class="hero-content">
-            <h1 class="fade-in">Showcase Site</h1>
-            <p class="fade-in">Built for performance and ready for content.</p>
-            <a href="#services" class="cta-button fade-in">View Services</a>
-        </div>
-    </header>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1 data-cms-id="hero_title">Amplify Your Digital Presence</h1>
+        <p data-cms-id="hero_subtitle">We craft high‑impact websites and AI-powered solutions that resonate.</p>
+        <a href="#cta-banner" class="btn-primary" data-cms-id="hero_cta_text">Start Your Project</a>
+      </div>
+    </section>
 
-    <main>
-        <section id="services" class="content-section">
-            <div class="section-container">
-                <h2 class="scroll-animate">Our Services</h2>
-                <p class="scroll-animate">The following services are managed and updated through our Headless CMS, allowing for easy updates from any device.</p>
-                
-                <div class="cards-container">
-                    <div class="info-card scroll-animate">
-                        <div class="icon-wrapper">
-                            <svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10V22"/><path d="M10 12H5.17a2 2 0 0 0-1.77 2.89l1.6 2.89A2 2 0 0 0 7 19h10a2 2 0 0 0 1.95-1.57l1.6-6A2 2 0 0 0 18.83 9H14"/><path d="M10 12V5a2 2 0 0 1 2-2v0a2 2 0 0 1 2 2v7"/></svg>
-                        </div>
-                        <h3>Web Development</h3>
-                        <p>High-performance websites built on a modern, secure tech stack.</p>
-                    </div>
+    <!-- Services Preview -->
+    <section id="services-preview">
+      <h2 class="section-heading" data-cms-id="services_heading">Our Core Services</h2>
+      <div class="service-cards">
+        <article class="service-card" data-cms-id="service1">
+          <!-- Innovation SVG Icon -->
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v4"></path>
+            <path d="M12 18v4"></path>
+            <path d="M4.93 4.93l2.83 2.83"></path>
+            <path d="M16.24 16.24l2.83 2.83"></path>
+            <path d="M2 12h4"></path>
+            <path d="M18 12h4"></path>
+            <path d="M4.93 19.07l2.83-2.83"></path>
+            <path d="M16.24 7.76l2.83-2.83"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <h3 data-cms-id="service1_title">Innovation</h3>
+          <p data-cms-id="service1_desc">Cutting‑edge design & AI automation.</p>
+        </article>
+        <article class="service-card" data-cms-id="service2">
+          <!-- Strategy SVG Icon -->
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h18v6H3z"></path>
+            <path d="M3 15h18v6H3z"></path>
+            <path d="M3 9l18 6"></path>
+          </svg>
+          <h3 data-cms-id="service2_title">Strategy</h3>
+          <p data-cms-id="service2_desc">Data‑driven roadmaps that win markets.</p>
+        </article>
+        <article class="service-card" data-cms-id="service3">
+          <!-- Results SVG Icon -->
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 17 9 11 13 15 21 7"></polyline>
+            <polyline points="14 7 21 7 21 14"></polyline>
+          </svg>
+          <h3 data-cms-id="service3_title">Results</h3>
+          <p data-cms-id="service3_desc">Tangible growth & measurable ROI.</p>
+        </article>
+      </div>
+    </section>
 
-                    <div class="info-card scroll-animate">
-                        <div class="icon-wrapper">
-                            <svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
-                        </div>
-                        <h3>Mobile Applications</h3>
-                        <p>Intuitive and engaging mobile apps for both iOS and Android platforms.</p>
-                    </div>
+    <!-- About Preview -->
+    <section id="about-preview">
+      <h2 class="section-heading" data-cms-id="about_heading">Who We Are</h2>
+      <p data-cms-id="about_text">Echo Agency is a collective of designers, strategists, and engineers amplifying brands through elite digital experiences.</p>
+    </section>
 
-                    <div class="info-card scroll-animate">
-                        <div class="icon-wrapper">
-                             <svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        </div>
-                        <h3>SEO & Strategy</h3>
-                        <p>Data-driven strategies to increase your visibility and drive organic traffic.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- CTA Banner -->
+    <section id="cta-banner">
+      <h2 data-cms-id="cta_heading">Ready to Echo Across the Web?</h2>
+      <a href="mailto:hello@echoagency.io" class="btn-secondary" data-cms-id="cta_button_text">Book a Free Consult</a>
+    </section>
+  </main>
 
-        <section class="image-section">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" 
-                 alt="Team working on laptops" 
-                 loading="lazy">
-        </section>
-    </main>
+  <footer>
+    <p>&copy; <span data-cms-id="copyright_year">2025</span> Echo Agency. All rights reserved.</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 Echo Agency. Built headless-ready.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="echo_agency_script.js"></script>
 </body>
 </html>
