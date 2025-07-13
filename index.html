@@ -2,19 +2,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <title data-cms-id="page_title">The Sarcastic Circus | Digital Mischief</title>
-  <meta name="description" content="Human‑AI wizardry for sites, apps & chatbots." />
+  <meta name="description" content="Human‑AI wizardry for sites, apps & chatbots." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thesarcasticcircus.com" />  <!-- Open Graph / Twitter -->  <meta property="og:title"        content="The Sarcastic Circus" />
+  <link rel="canonical" href="https://thesarcasticcircus.com" />  <!-- Social cards -->  <meta property="og:title"        content="The Sarcastic Circus" />
   <meta property="og:description"  content="Meet the troupe & see the acts." />
   <meta property="og:image"        content="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" />
   <meta property="og:type"         content="website" />
   <meta property="og:url"          content="https://thesarcasticcircus.com" />  <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="The Sarcastic Circus" />
   <meta name="twitter:description" content="A Human‑AI three‑ring show." />
-  <meta name="twitter:image"       content="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" />  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="twitter:image"       content="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" />  <!-- Local styles / preload fonts -->  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-</head><body>
+  <link rel="stylesheet" href="styles.css" />  <!-- Inline root vars so hero loads instantly -->  <style>
+    :root{
+      --hero-bg:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80');
+    }
+  </style></head><body>
   <a href="#main" class="skip-link">Skip to content</a>  <!-- ▾▾ Navigation ▾▾ -->  <header role="banner">
     <nav role="navigation">
       <ul>
@@ -26,8 +29,7 @@
     </nav>
   </header>  <main id="main">
     <!-- ▾▾ Hero ▾▾ -->
-    <section id="hero" data-bg>
-      <!-- background image handled by CSS var, see bottom script -->
+    <section id="hero">
       <div class="hero-content" data-aos="zoom-in">
         <h1  data-cms-id="hero_title">Digital Mischief Mastered</h1>
         <p   data-cms-id="hero_tagline">Sites, apps & chatbots that slap (metaphorically).</p>
@@ -40,7 +42,7 @@
   <div class="services-grid">
     <article class="service-card">
       <a href="https://unsplash.com/photos/1498050108023-c5249f4df085" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Code on multiple monitors" width="400" height="260" />
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Code on multiple monitors" width="600" height="400" />
       </a>
       <h3 data-cms-id="svc1_title">Web Development</h3>
       <p  data-cms-id="svc1_desc">Responsive, performant & just a tad sarcastic.</p>
@@ -48,7 +50,7 @@
 
     <article class="service-card">
       <a href="https://unsplash.com/photos/1518773553398-650c184e0bb3" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=400&q=80" alt="Humanoid robot holding tablet" width="400" height="260" />
+        <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=600&q=80" alt="Humanoid robot holding tablet" width="600" height="400" />
       </a>
       <h3 data-cms-id="svc2_title">Chat Bots</h3>
       <p  data-cms-id="svc2_desc">Bots that banter and actually convert.</p>
@@ -56,7 +58,7 @@
 
     <article class="service-card">
       <a href="https://unsplash.com/photos/1504384308090-c894fdcc538d" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Abstract AI brain visualization" width="400" height="260" />
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Abstract AI brain visualization" width="600" height="400" />
       </a>
       <h3 data-cms-id="svc3_title">AI Consulting</h3>
       <p  data-cms-id="svc3_desc">Navigate the hype—no clown suit required.</p>
@@ -67,12 +69,12 @@
 <!-- ▾▾ About Preview ▾▾ -->
 <section id="about-preview" data-aos="fade-up">
   <div class="about-content">
-    <a href="https://unsplash.com/photos/XJXWbfSo2f0" target="_blank" rel="noopener noreferrer">
+    <a href="https://unsplash.com/photos/1519389950473-47ba0277781c" target="_blank" rel="noopener noreferrer">
       <img data-cms-id="about_image"
            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
-           alt="Developer thinking at laptop"
+           alt="Developer brainstorming in front of whiteboard"
            loading="lazy"
-           width="600" height="400" />
+           width="800" height="533" />
     </a>
     <div>
       <h2 data-cms-id="about_title">Our Philosophy</h2>
@@ -104,23 +106,8 @@
 
 <p data-cms-id="footer_disclaimer">© <span data-year></span> The Sarcastic Circus — All Jokes Reserved</p>
 
-  </footer>  <!-- Stock hero background URL pushed into a CSS variable so we don’t edit the stylesheet -->  <script>
-    document.documentElement.style.setProperty('--hero-bg', "url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80')");
-  </script>  <!-- ▾▾ OPTIONAL CMS DATA ▾▾  (replace in production) -->  <script id="cms-data" type="application/json">{}</script>  <!-- ▾▾ Scripts ▾▾ -->  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      /* AOS */ if (window.AOS) AOS.init();
-
-      /* Year */ const y=document.querySelector('[data-year]'); if(y) y.textContent=new Date().getFullYear();
-
-      /* CMS hydrate */
-      let data={};
-      try{ data=JSON.parse(document.getElementById('cms-data').textContent||'{}'); }catch(e){}
-      document.querySelectorAll('[data-cms-id]').forEach(el=>{
-        const key=el.dataset.cmsId;
-        if(!(key in data)) return;
-        if(el.tagName==='IMG'){ el.src=data[key]; if(!el.alt) el.alt=key; }
-        else{ el.textContent=data[key]; }
-      });
-    });
-  </script></body>
-</html>
+  </footer>  <!-- Empty JSON ready for CMS injection -->  <script id="cms-data" type="application/json">{}</script>  <!-- JS -->  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>  <script defer>
+    document.addEventListener('DOMContentLoaded',()=>{
+      if(window.AOS) AOS.init();
+      const y=document.querySelector('[data-year]'); if(y) y.textContent=new Date().getFullYear();
+      let data={}; try{ data=JSON.parse(document.getElementById('
