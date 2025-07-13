@@ -1,121 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-cms-id="page_title">The Sarcastic Circus | Digital Big Top</title>
-    <meta name="description" content="Welcome to The Sarcastic Circus, where absurdly brilliant web design, apps, chatbots, and AI consulting make your digital dreams a reality.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-cms-id="page_title">{{page_title|The Sarcastic Circus | Digital Mischief}}</title>
+  <meta name="description" content="{{meta_description|Human‑AI wizardry for sites, apps & chatbots.}}">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="{{canonical_url|https://thesarcasticcircus.com}}">  <!-- OG / Twitter  (CMS will overwrite) -->  <meta property="og:title"       content="{{og_title|The Sarcastic Circus}}">
+  <meta property="og:description" content="{{og_description|Meet the troupe & see our acts.}}">
+  <meta property="og:image"       content="{{og_image|/og.jpg}}">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="{{og_url|https://thesarcasticcircus.com}}">  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="{{twitter_title|The Sarcastic Circus}}">
+  <meta name="twitter:description" content="{{twitter_description|A Human‑AI three‑ring show.}}">
+  <meta name="twitter:image"       content="{{twitter_image|/og.jpg}}">  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a href="#main" class="skip-link">Skip to content</a>  <!-- ▾▾ Navigation ▾▾ -->  <header role="banner">
+    <nav role="navigation">
+      <ul>
+        <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+        <li><a class="nav-link" href="about.html">About&nbsp;Us</a></li>
+        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>  <!-- ▾▾ Hero ▾▾ -->  <section id="hero">
+    <div class="hero-content" data-aos="zoom-in">
+      <h1 data-cms-id="hero_title">{{hero_title|Where Code Meets Carnival}}</h1>
+      <p  data-cms-id="hero_tagline">{{hero_tagline|Web, apps & AI with bite.}}</p>
+      <a href="#services-preview" class="cta" data-cms-id="hero_cta">{{hero_cta|See the Acts}}</a>
+    </div>
+  </section>  <!-- ▾▾ Services Preview ▾▾ -->  <section id="services-preview" data-aos="fade-up">
+    <h2>Featured Services</h2>
+    <div class="services-grid">
+      <article class="service-card">
+        <svg width="48" height="48"><use href="#icon-web"></use></svg>
+        <h3 data-cms-id="svc1_title">Web&nbsp;Development</h3>
+        <p  data-cms-id="svc1_desc">Responsive, performant, and just a tad sarcastic.</p>
+      </article>
+      <article class="service-card">
+        <svg width="48" height="48"><use href="#icon-bot"></use></svg>
+        <h3 data-cms-id="svc2_title">Chat&nbsp;Bots</h3>
+        <p  data-cms-id="svc2_desc">Bots that banter and actually convert.</p>
+      </article>
+      <article class="service-card">
+        <svg width="48" height="48"><use href="#icon-ai"></use></svg>
+        <h3 data-cms-id="svc3_title">AI&nbsp;Consulting</h3>
+        <p  data-cms-id="svc3_desc">Navigate the hype—no clown suit required.</p>
+      </article>
+    </div>
+  </section>  <!-- ▾▾ About Preview ▾▾ -->  <section id="about-preview" data-aos="fade-up">
+    <div class="about-content">
+      <img data-cms-id="about_image" src="{{about_image|/about.jpg}}" alt="{{about_image_alt|Ringmaster wrangling code}}" loading="lazy" width="600" height="400">
+      <div>
+        <h2 data-cms-id="about_title">{{about_title|Our Philosophy}}</h2>
+        <p  data-cms-id="about_text">{{about_text|Humans + Machines > either alone. We orchestrate both like a ringmaster with a very obedient robot lion.}}</p>
+        <a href="about.html" class="cta">Learn More</a>
+      </div>
+    </div>
+  </section>  <!-- ▾▾ CTA Banner ▾▾ -->  <section id="cta-banner" data-aos="zoom-in">
+    <h2 data-cms-id="cta_title">{{cta_title|Ready to Step Into the Ring?}}</h2>
+    <a href="contact.html" data-cms-id="cta_button">{{cta_button|Book&nbsp;Your&nbsp;Show}}</a>
+  </section>  <!-- ▾▾ Footer ▾▾ -->  <footer role="contentinfo">
+    <nav role="navigation">
+      <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About&nbsp;Us</a></li>
+        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav><div class="social-media">
+  <a href="{{twitter_url|#}}"   target="_blank" rel="noopener noreferrer"><img src="/icons/twitter.svg"  alt="Twitter"></a>
+  <a href="{{facebook_url|#}}"  target="_blank" rel="noopener noreferrer"><img src="/icons/facebook.svg" alt="Facebook"></a>
+  <a href="{{instagram_url|#}}" target="_blank" rel="noopener noreferrer"><img src="/icons/instagram.svg"alt="Instagram"></a>
+</div>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1 data-cms-id="hero_title">Step Right Up to the Digital Big Top</h1>
-                <p data-cms-id="hero_subtitle">Where we turn your wildest<<"Step Right Up to the Digital Big Top",
-        hero_subtitle: "Where we turn your wildest web dreams into reality (and occasionally into nightmares, but only if you ask nicely).",
-        services_title: "Our Spectacular Services",
-        service_title_1: "Web Design",
-        service_description_1: "Our web designs are so stunning, they’ll make your visitors question their life choices. But in a good way.",
-        service_title_2: "Web Apps",
-        service_description_2: "We build web apps so intuitive, even your grandma could use them (no offense to grandmas, they’re great).",
-        service_title_3: "Chatbots",
-        service_description_3: "Our chatbots are so lifelike, you’ll swear they’re sentient. Don’t worry, they’re not plotting world domination... yet.",
-        service_title_4: "AI Consultation",
-        service_description_4: "We’ll teach you to harness AI so you can automate pesky tasks and focus on what matters: binge-watching cat videos.",
-        about_title: "About Us",
-        about_description: "We’re not your average web agency. Think of us as misfit geniuses who turned the digital world into our playground.",
-        about_image: "https://images.unsplash.com/photo-1507216698-4f3eabcd2b72",
-        cta_title: "Don’t Be a Spectator, Join the Show",
-        cta_description: "Contact us now and let’s create some digital magic. Or just send us a meme. We’re cool with that too.",
-        cta_button: "Step Into the Ring",
-        footer_disclaimer: "Warning: Prolonged exposure to our site may cause laughter, creativity, and an urge to hire us. Proceed with caution.",
-        // about.html
-        main_title: "Our Story: Where Strategy Meets AI",
-        mission_title: "Mission & Vision",
-        mission_text: "We started this circus because the digital world was too boring. Our mission? To inject chaos, creativity, and a touch of AI-fueled madness into every project.",
-        mission_image: "https://images.unsplash.com/photo-1517456215142-6d53b0a3e0bc",
-        philosophy_title: "Our Philosophy",
-        philosophy_text: "We believe in the power of humans and machines working together—like a ringmaster and a lion, but with less roaring and more coding.",
-        team_title: "Meet the Team",
-        team_image_1: "https://images.unsplash.com/photo-1516321497487-e288fb19713f",
-        team_name_1: "Ringmaster Bob",
-        team_bio_1: "The guy who claims he invented Wi-Fi. Spoiler: he didn’t. But he’s a genius at turning coffee into code.",
-        team_image_2: "https://images.unsplash.com/photo-1523464801710-33f9751b7289",
-        team_name_2: "Clown Cassandra",
-        team_bio_2: "Our AI whisperer. She talks to chatbots like they’re her pets and makes them obey (mostly).",
-        team_image_3: "https://images.unsplash.com/photo-1511551203521-1d70bb3b36b7",
-        team_name_3: "Juggler Jamie",
-        team_bio_3: "Juggles deadlines, code, and existential crises. Also makes killer memes.",
-        // services.html
-        services_page_title: "Sarcastic Circus Services | Web, Apps, AI & More",
-        web_dev_title: "Web Development",
-        web_dev_image: "https://images.unsplash.com/photo-1516321313936-4cb3128700d7",
-        web_dev_description: "We craft websites so dazzling, they’ll make your competitors weep into their outdated HTML.",
-        web_dev_feature_1: "Responsive designs that look good on everything, even your grandma’s flip phone.",
-        web_dev_feature_2: "SEO optimization so Google loves you more than us (unlikely).",
-        web_dev_feature_3: "Custom CMS integration for when you want to change things without crying.",
-        web_dev_benefits: "Benefits: Stand out, convert visitors, and make your brand unforgettable.",
-        app_dev_title: "App Development",
-        app_dev_image: "https://images.unsplash.com/photo-1511551203521-1d70bb3b36b7",
-        app_dev_description: "Our web apps are so smooth, they make butter jealous.",
-        app_dev_feature_1: "Cross-platform compatibility for maximum reach.",
-        app_dev_feature_2: "Scalable architecture to handle your inevitable viral success.",
-        app_dev_feature_3: "User-friendly interfaces that don’t require a PhD to navigate.",
-        app_dev_benefits: "Benefits: Engage users, boost efficiency, and flex your tech superiority.",
-        chatbot_title: "Chatbot Technology",
-        chatbot_image: "https://images.unsplash.com/photo-1507216698-4f3eabcd2b72",
-        chatbot_description: "Our chatbots are so charming, they could convince you to buy a timeshare.",
-        chatbot_feature_1: "Natural language processing for human-like conversations.",
-        chatbot_feature_2: "Integration with your existing platforms (yes, even that clunky CRM).",
-        chatbot_feature_3: "24/7 availability to answer questions while you nap.",
-        chatbot_benefits: "Benefits: Automate support, delight customers, and save your sanity.",
-        ai_consulting_title: "AI Consulting",
-        ai_consulting_image: "https://images.unsplash.com/photo-1516321165247-7a6d3e8e9363",
-        ai_consulting_description: "AI isn’t just for sci-fi movies anymore. We’ll guide you through the AI jungle.",
-        ai_consulting_feature_1: "Tailored AI strategies for your business goals.",
-        ai_consulting_feature_2: "Training to empower your team to use AI like pros.",
-        ai_consulting_feature_3: "Ethical AI guidance so you don’t accidentally start Skynet.",
-        ai_consulting_benefits: "Benefits: Stay ahead of the curve, save time, and impress your investors.",
-        // contact.html
-        contact_page_title: "Contact The Sarcastic Circus | Get in the Ring",
-        form_title: "Send Us a Message",
-        form_description: "Got a wild idea? Need a website that slaps or a chatbot that sasses? Drop us a line.",
-        form_image: "https://images.unsplash.com/photo-1517456215142-6d53b0a3e0bc",
-        form_button: "Send to the Big Top",
-        info_title: "Other Ways to Reach Us",
-        info_description: "Not a form person? No judgment. Try these instead:",
-        info_email: "mailto:info@sarcasticcircus.com",
-        info_phone: "Phone: +1-800-CIRCUS-AI (Just kidding, we’ll get a number soon)",
-        info_address: "Address: Somewhere in the Digital Big Top, Internetville"
-    };
+<p data-cms-id="footer_disclaimer">{{footer_disclaimer|© <span data-year></span> The Sarcastic Circus—All Jokes Reserved}}</p>
 
-    // Populate content using data-cms-id attributes
-    document.querySelectorAll('[data-cms-id]').forEach(element => {
-        const id = element.getAttribute('data-cms-id');
-        if (data[id]) {
-            if (element.tagName === 'IMG') {
-                element.src = data[id];
-            } else if (element.tagName === 'A' && id.includes('email')) {
-                element.href = data[id];
-            } else {
-                element.textContent = data[id];
-            }
+  </footer>  <!-- ▾▾ CMS DATA (hidden) ▾▾  Replace with real JSON in prod. -->  <script id="cms-data" type="application/json">{
+    "hero_title":"Digital Mischief Mastered",
+    "hero_tagline":"Sites, apps & chatbots that slap (metaphorically)",
+    "hero_cta":"Watch the Show"
+  }</script>  <!-- ▾▾ JS ▾▾ -->  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>  <script defer>
+    document.addEventListener('DOMContentLoaded',()=>{
+      /* 1. Animate on scroll */
+      if (window.AOS) AOS.init();
+
+      /* 2. Inject current year */
+      const yearSpan=document.querySelector('[data-year]');
+      if(yearSpan) yearSpan.textContent=new Date().getFullYear();
+
+      /* 3. CMS hydration */
+      const raw=document.getElementById('cms-data');
+      if(!raw) return;
+      let data={};
+      try{ data=JSON.parse(raw.textContent);}catch(e){console.error('CMS JSON parse error',e);}
+      document.querySelectorAll('[data-cms-id]').forEach(el=>{
+        const key=el.dataset.cmsId;
+        if(!key||!(key in data)) return;
+        if(el.tagName==='IMG'){
+          el.src=data[key];
+          if(!el.alt) el.alt=key;
+        }else{
+          el.textContent=data[key];
         }
+      });
     });
-}
-
-// Execute the function on page load
-fetchAndRenderContent();
+  </script></body>
+</html>
