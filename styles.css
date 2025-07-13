@@ -1,29 +1,21 @@
-/*  --- (all existing styles from previous file stay unchanged above) --- */
-
-/* Scroll-reveal helper */
+/* ---- Reveal animation (if not already present) ---- */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease-out,transform .6s ease-out}
 .reveal.visible{opacity:1;transform:none}
 
-/* Hero overlay & desktop parallax  */
-#hero{
-  position:relative;
-  background:var(--hero-bg) center/cover no-repeat;
-  color:var(--text-light);
+/* ---- Services grid & cards (if missing) ---- */
+.services-grid{
+  display:grid;
+  gap:var(--gap);
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
-#hero::before{
-  content:'';
-  position:absolute;inset:0;
-  background:var(--hero-overlay);
-  pointer-events:none;
-  z-index:-1;
+.service-card{
+  background:#1a1a1a;
+  padding:1.3rem;
+  border-radius:10px;
+  box-shadow:0 8px 18px var(--shadow);
+  transition:transform .25s;
+  text-align:center;
 }
-/* parallax feel only on large screens */
-@media(min-width:1024px){
-  #hero{background-attachment:fixed;}
-}
+.service-card:hover{transform:translateY(-8px);}
 
-/* Global rhythm looser */
-:root{
-  --gap   : 2.5rem;   /* mobile & tablet */
-  --gap-lg: 3.5rem;   /* desktop */
-}
+/* ---- Mobile tweaks remain unchanged ---- */
