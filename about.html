@@ -1,141 +1,87 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-cms-id="page_title">{{page_title|About The Sarcastic Circus | Human‑AI Digital Wizardry}}</title>
-    <meta name="description" content="{{meta_description|Discover the story of The Sarcastic Circus—where humans and AI collaborate to deliver absurdly brilliant web development and AI solutions.}}">
-    <meta name="robots" content="{{robots_meta|index,follow}}">
-    <link rel="canonical" href="{{canonical_url|https://thesarcasticcircus.com/about}}">
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{og_title|About The Sarcastic Circus}}">
-    <meta property="og:description" content="{{og_description|From strategy to shipping, see how our merry band fuses code & creativity.}}">
-    <meta property="og:image" content="{{og_image_url|https://thesarcasticcircus.com/og-image.jpg}}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{og_url|https://thesarcasticcircus.com/about}}">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{twitter_title|About The Sarcastic Circus}}">
-    <meta name="twitter:description" content="{{twitter_description|Meet the human‑AI crew behind the curtain.}}">
-    <meta name="twitter:image" content="{{twitter_image|https://thesarcasticcircus.com/og-image.jpg}}"><link rel="stylesheet" href="styles.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | The Sarcastic Circus</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Skip-link for keyboard / assistive tech users -->
-    <a href="#main" class="skip-link">Skip to content</a><header role="banner">
-    <nav role="navigation">
-        <ul>
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link" aria-current="page">About Us</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
+  <!-- NAV -->
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About&nbsp;Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main id="main">
-    <h1 data-cms-id="main_title">{{main_title|Our Story: Where Strategy Meets AI}}</h1>
-
-    <!-- Mission & Vision Section -->
-    <section id="mission-vision" data-aos="fade-up">
-        <h2 data-cms-id="mission_title">{{mission_title|Mission & Vision}}</h2>
-        <p data-cms-id="mission_text">{{mission_text|We started this circus so you can launch big ideas without the face‑paint‑induced nightmares.}}</p>
-        <img data-cms-id="mission_image"
-             src="{{mission_image_url|https://placehold.co/800x450}}"
-             alt="{{mission_image_alt|Circus tent glowing with code}}"
-             loading="lazy"
-             width="{{mission_image_w|800}}"
-             height="{{mission_image_h|450}}">
+  <main>
+    <!-- HERO -->
+    <section id="hero" style="
+      background:linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,.85)),
+      url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1600&q=80')
+      center/cover no-repeat">
+      <div class="hero-inner">
+        <h1>Meet the Troupe</h1>
+        <p>Human creativity &amp; machine precision under one big top.</p>
+      </div>
     </section>
 
-    <!-- Our Philosophy Section -->
-    <section id="philosophy" data-aos="fade-up">
-        <h2 data-cms-id="philosophy_title">{{philosophy_title|Our Philosophy}}</h2>
-        <p data-cms-id="philosophy_text">{{philosophy_text|Humans + Machines > Either Alone. We orchestrate the two like a ringmaster and a very enthusiastic robot elephant.}}</p>
-        <img data-cms-id="philosophy_image"
-             src="{{philosophy_image_url|https://placehold.co/800x450}}"
-             alt="{{philosophy_image_alt|Robot elephant balancing on a ball}}"
-             loading="lazy"
-             width="{{philosophy_image_w|800}}"
-             height="{{philosophy_image_h|450}}">
+    <!-- STORY -->
+    <section class="container">
+      <h2>Our Story</h2>
+      <p>Founded in 2021 by a recovering circus performer — turned developer — The Sarcastic Circus blends
+         sharp wit, strategy, and AI to build digital experiences that slap (metaphorically). We believe
+         tech should feel magical&nbsp;— but never smoke-and-mirrors.</p>
     </section>
 
-    <!-- Core Values Section -->
-    <section id="values" data-aos="fade-up">
-        <h2 data-cms-id="values_title">{{values_title|Core Values}}</h2>
-        <ul>
-            <li data-cms-id="value_1">Creativity with teeth</li>
-            <li data-cms-id="value_2">Radical transparency</li>
-            <li data-cms-id="value_3">Performance over pomp</li>
-            <li data-cms-id="value_4">Humour mandatory</li>
-        </ul>
+    <!-- VALUES -->
+    <section class="container">
+      <h2>Values That Guide Us</h2>
+      <ul style="display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:0;padding:0;list-style:none">
+        <li class="service-card"><h3>Radical Clarity</h3><p>No jargon. No guesswork.</p></li>
+        <li class="service-card"><h3>Playful Rigor</h3><p>Fun is mandatory; bugs are not.</p></li>
+        <li class="service-card"><h3>User First</h3><p>Delight beats “feature creep” every day.</p></li>
+      </ul>
     </section>
 
-    <!-- Meet the Team Section -->
-    <section id="team" data-aos="fade-up">
-        <h2 data-cms-id="team_title">{{team_title|Meet the Troupe}}</h2>
-        <div class="team-grid">
-            <article class="team-member">
-                <img data-cms-id="team_image_1"
-                     src="{{team_image_url_1|https://placehold.co/400x400}}"
-                     alt="{{team_image_alt_1|Ringmaster Rex in top‑hat}}"
-                     loading="lazy"
-                     width="{{team_image_w_1|400}}"
-                     height="{{team_image_h_1|400}}">
-                <h3 data-cms-id="team_name_1">{{team_name_1|Ringmaster Rex}}</h3>
-                <p data-cms-id="team_bio_1">{{team_bio_1|Writes code that cracks whips—occasionally also whips that write code.}}</p>
-            </article>
-
-            <article class="team-member">
-                <img data-cms-id="team_image_2"
-                     src="{{team_image_url_2|https://placehold.co/400x400}}"
-                     alt="{{team_image_alt_2|Clown Cassandra with a laptop}}"
-                     loading="lazy"
-                     width="{{team_image_w_2|400}}"
-                     height="{{team_image_h_2|400}}">
-                <h3 data-cms-id="team_name_2">{{team_name_2|Clown Cassandra}}</h3>
-                <p data-cms-id="team_bio_2">{{team_bio_2|Tames chatbots like feral cats, except they actually listen.}}</p>
-            </article>
-
-            <article class="team-member">
-                <img data-cms-id="team_image_3"
-                     src="{{team_image_url_3|https://placehold.co/400x400}}"
-                     alt="{{team_image_alt_3|Juggler Jamie coding in mid‑air}}"
-                     loading="lazy"
-                     width="{{team_image_w_3|400}}"
-                     height="{{team_image_h_3|400}}">
-                <h3 data-cms-id="team_name_3">{{team_name_3|Juggler Jamie}}</h3>
-                <p data-cms-id="team_bio_3">{{team_bio_3|Keeps three deadlines, two coffees, and one existential crisis aloft simultaneously.}}</p>
-            </article>
-        </div>
+    <!-- TEAM -->
+    <section class="container">
+      <h2>The Core Team</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80"
+               alt="Photo of Shane">
+          <h3>Shane&nbsp;— Founder / Ringmaster</h3>
+          <p>Ex-investigator turned UX geek. Reads code and people.</p>
+        </article>
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1502767089025-6572583495b4?auto=format&fit=crop&w=400&q=80"
+               alt="Photo of Heather">
+          <h3>Heather&nbsp;— Producer</h3>
+          <p>Schedules chaos into orderly sprints and client wins.</p>
+        </article>
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1554384645-13eab165c24b?auto=format&fit=crop&w=400&q=80"
+               alt="Photo of AI avatar">
+          <h3>“GPT-Leo”&nbsp;— AI Tamer</h3>
+          <p>Our silicon lion: crunches data, drafts copy, never sleeps.</p>
+        </article>
+      </div>
     </section>
-</main>
 
-<footer role="contentinfo">
-    <nav role="navigation">
-        <ul>
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About Us</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="social-media">
-        <a data-cms-id="twitter_url" href="{{twitter_url|#}}"><img src="twitter-icon.svg" alt="Follow us on Twitter"></a>
-        <a data-cms-id="facebook_url" href="{{facebook_url|#}}"><img src="facebook-icon.svg" alt="Like us on Facebook"></a>
-        <a data-cms-id="instagram_url" href="{{instagram_url|#}}"><img src="instagram-icon.svg" alt="Follow us on Instagram"></a>
-    </div>
-    <p data-cms-id="footer_disclaimer">{{footer_disclaimer|Warning: Prolonged exposure may cause innovation, laughter, and an irresistible urge to hire us.}}</p>
-</footer>
+    <!-- CTA -->
+    <section class="cta-band">
+      <h2>Like what you see?</h2>
+      <a href="contact.html" class="cta">Let’s Talk</a>
+    </section>
+  </main>
 
-<!-- Scripts -->
-<script src="script.js" defer></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-<script defer>
-    document.addEventListener('DOMContentLoaded', function () {
-        if (window.AOS) AOS.init();
-    });
-</script>
-
+  <footer><p>&copy; <span id="y"></span> The Sarcastic Circus</p></footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
