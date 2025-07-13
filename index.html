@@ -2,58 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta
-    http-equiv="Content-Security-Policy"
-    content="default-src 'self';
-             style-src 'self' 'unsafe-inline';
-             img-src 'self' https://images.unsplash.com data:;
-             script-src 'self' 'unsafe-inline';
-             upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 style-src   'self' 'unsafe-inline';
+                 script-src  'self' 'unsafe-inline';
+                 img-src     'self' https://images.unsplash.com data:;
+                 upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>The Sarcastic Circus | Digital Mischief</title>
-  <meta name="description" content="Human-AI wizardry for sites, apps & chatbots.">
+  <meta name="description" content="Human-AI wizardry for sites, apps, and chatbots.">
   <link rel="canonical" href="https://thesarcasticcircus.com">
 
   <!-- Preload hero for faster LCP -->
   <link rel="preload"
+        as="image"
         href="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80"
-        as="image" media="(min-width:600px)">
+        media="(min-width:600px)">
 
-  <!-- PWA bits -->
-  <link rel="icon" type="image/png" href="/icons/favicon-32.png" sizes="32x32">
+  <!-- Icons / PWA manifest -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- Critical nav + hero styles -->
   <style>
     :root{
+      --bg:#121212; --text:#ffffff;
+      --primary:#ff00ff; --secondary:#00ffff;
+      --shadow:rgba(0,0,0,.5);
       --hero-img:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80');
       --hero-overlay:rgba(0,0,0,.55);
-      --gap:2.5rem;--gap-lg:3.5rem;
-      --primary:#ff00ff;--secondary:#00ffff;
-      --bg:#121212;--text:#fff;--shadow:rgba(0,0,0,.5);
+      --gap:2.5rem; --gap-lg:3.5rem;
     }
     *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-    header{position:sticky;top:0;background:var(--bg);z-index:100}
-    .nav{display:flex;gap:2.5rem;justify-content:center;padding:.8rem 1rem;margin:0;list-style:none}
+    body{
+      margin:0;font-family:system-ui,Arial,sans-serif;
+      background:var(--bg);color:var(--text);line-height:1.6;
+      overflow-x:hidden
+    }
+    .user-is-tabbing a:focus-visible,
+    .user-is-tabbing button:focus-visible{
+      outline:2px solid var(--secondary);outline-offset:4px
+    }
+    /* NAV */
+    header{position:sticky;top:0;z-index:100;background:var(--bg)}
+    .nav{margin:0;padding:.8rem 1rem;display:flex;
+         justify-content:center;gap:2.5rem;list-style:none}
     .nav a{color:var(--text);text-decoration:none;font-size:1.05rem;transition:color .25s}
     .nav a:hover,.nav a[aria-current="page"]{color:var(--primary)}
-    #hero{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;background:var(--hero-img) center/cover no-repeat}
+    /* HERO */
+    #hero{
+      min-height:80vh;display:flex;align-items:center;justify-content:center;
+      position:relative;text-align:center;
+      background:var(--hero-img) center/cover no-repeat
+    }
     #hero::before{content:'';position:absolute;inset:0;background:var(--hero-overlay);z-index:0}
-    .hero-inner{position:relative;z-index:1;padding:0 1rem;max-width:28rem}
-    .cta{display:inline-block;margin-top:1.2rem;background:var(--secondary);color:#000;padding:.7rem 1.4rem;border-radius:5px;font-weight:600;text-decoration:none;transition:background-color .3s,box-shadow .3s,cursor .2s}
-    .cta:hover{background:#00cccc;box-shadow:0 4px 12px var(--shadow);cursor:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"%23ff00ff\"><circle cx=\"12\" cy=\"12\" r=\"4\"/></svg>') 16 16,auto}
+    .hero-inner{position:relative;z-index:1;max-width:28rem;padding:0 1rem}
     h1{font-size:clamp(2.25rem,8vw,3.5rem);margin:0 0 .8rem}
-    p {font-size:clamp(1rem,4vw,1.25rem);margin:0}
-    /* reveal default */
+    p {font-size:clamp(1rem,4vw,1.25rem);margin:0 0 1.2rem}
+    .cta{
+      display:inline-block;margin-top:1.2rem;
+      background:var(--secondary);color:#000;
+      padding:.7rem 1.4rem;border-radius:5px;font-weight:600;text-decoration:none;
+      transition:background-color .25s,box-shadow .25s,cursor .2s
+    }
+    .cta:hover{
+      background:#00cccc;box-shadow:0 4px 12px var(--shadow);
+      cursor:url('data:image/svg+xml;utf8,\
+        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" \
+             viewBox=\"0 0 24 24\" fill=\"%23ff00ff\">\
+             <circle cx=\"12\" cy=\"12\" r=\"4\"/></svg>') 16 16,auto
+    }
+    /* Reveal */
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease-out,transform .6s ease-out}
     .reveal.visible{opacity:1;transform:none}
-    /* hero parallax on desktop only */
     @media(min-width:1024px){#hero{background-attachment:fixed}}
   </style>
 
-  <!-- load full sheet async -->
+  <!-- Full stylesheet async -->
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
@@ -65,12 +91,10 @@
     "@type":"Organization",
     "name":"The Sarcastic Circus",
     "url":"https://thesarcasticcircus.com",
-    "sameAs":[
-      "https://twitter.com",
-      "https://facebook.com",
-      "https://instagram.com"
-    ],
     "logo":"https://thesarcasticcircus.com/icons/logo.png",
+    "sameAs":[
+      "https://twitter.com","https://facebook.com","https://instagram.com"
+    ],
     "serviceProvided":[
       {"@type":"Service","name":"Web Development"},
       {"@type":"Service","name":"AI Chatbot Development"},
@@ -82,21 +106,28 @@
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <header><nav><ul class="nav">
-    <li><a href="index.html" aria-current="page">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul></nav></header>
+  <!-- NAV -->
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About&nbsp;Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main id="main">
     <!-- HERO -->
-    <section id="hero" class="reveal" style="background:
-      linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,.85)),
-      url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1080&q=80') center/cover no-repeat;">
+    <section id="hero" class="reveal"
+      style="background:
+        linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,.85)),
+        url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1080&q=80')
+        center/cover no-repeat;">
       <div class="hero-inner">
         <h1 id="scramble">Digital&nbsp;Mischief&nbsp;Mastered</h1>
-        <p>Sites, apps & chatbots that slap — metaphorically.</p>
+        <p>Sites, apps &amp; chatbots that slap — metaphorically.</p>
         <a href="#services-preview" class="cta">See the Acts</a>
       </div>
     </section>
@@ -105,18 +136,45 @@
     <section id="services-preview" class="container" style="padding-block:var(--gap)">
       <h2 class="reveal">Featured Services</h2>
       <div class="services-grid">
-        <!-- three service cards (same as earlier, add reveal class) -->
-        <!-- ... -->
+        <article class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=480&q=80"
+               width="480" height="300" loading="lazy" decoding="async" alt="Code on multi-monitor setup">
+          <h3>Web Development</h3>
+          <p>Responsive, performant &amp; a tad sarcastic.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=480&q=80"
+               width="480" height="300" loading="lazy" decoding="async" alt="Robot holding tablet">
+          <h3>Chat Bots</h3>
+          <p>Bots that banter and actually convert.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=480&q=80"
+               width="480" height="300" loading="lazy" decoding="async" alt="Abstract AI brain visualization">
+          <h3>AI Consulting</h3>
+          <p>Navigate the hype — no clown suit required.</p>
+        </article>
       </div>
     </section>
 
     <!-- ABOUT PREVIEW -->
     <section id="about-preview" class="container" style="padding-block:var(--gap)">
-      <!-- about-content with reveal class -->
+      <div class="about-content reveal" style="display:flex;gap:var(--gap);align-items:center">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
+             width="600" height="400" loading="lazy" decoding="async"
+             alt="Developer brainstorming in front of whiteboard">
+        <div>
+          <h2>Our Philosophy</h2>
+          <p>Humans + Machines &gt; either alone. We orchestrate both like a ringmaster with an obedient robot lion.</p>
+          <a href="about.html" class="cta">Learn More</a>
+        </div>
+      </div>
     </section>
 
     <!-- CTA -->
-    <section id="cta-banner" style="padding-block:var(--gap);background:#ff00ff;color:#000;text-align:center">
+    <section id="cta-banner" style="padding-block:var(--gap);background:var(--primary);color:#000;text-align:center">
       <div class="container reveal">
         <h2>Ready to Step Into the Ring?</h2>
         <a href="contact.html" class="cta">Book Your Show</a>
@@ -129,40 +187,50 @@
     <p>© <span id="year"></span> The Sarcastic Circus — All Jokes Reserved</p>
   </footer>
 
-  <!-- JS: year, focus outline, reveal, text-scramble, SW -->
+  <!-- SMALL JS bundle -->
   <script>
     /* Year */
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    /* focus outline helper */
-    addEventListener('keydown',e=>{if(e.key==='Tab')document.body.classList.add('user-is-tabbing')},{once:true});
+    /* Focus outline helper */
+    addEventListener('keydown', e => {
+      if (e.key === 'Tab') document.body.classList.add('user-is-tabbing');
+    }, { once:true });
 
-    /* Scroll-reveal */
-    const prefersReduced = matchMedia('(prefers-reduced-motion:reduce)').matches;
-    if(!prefersReduced){
-      const io = new IntersectionObserver(entries=>{
-        entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
-      },{threshold:.15});
-      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-    }else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
+    /* Intersection-observer reveal */
+    const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if (!reduce) {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold:.15 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
 
-    /* Tiny text-scramble for hero */
-    (function(){
-      const el=document.getElementById('scramble');
-      const chars='█▓▒░<>/+-';
-      const orig=el.textContent;
-      let frame=0;
-      const scramble=()=>{el.textContent=orig.split('').map((c,i)=>
-        i<frame?c:chars[Math.floor(Math.random()*chars.length)]).join('');
+    /* Tiny text-scramble intro */
+    (function () {
+      const el = document.getElementById('scramble');
+      const chars = '█▓▒░<>/+-';
+      const orig  = el.textContent;
+      let frame = 0;
+      (function scramble () {
+        el.textContent = orig.split('').map((c, i) =>
+          i < frame ? c : chars[Math.floor(Math.random() * chars.length)]
+        ).join('');
         frame++;
-        if(frame<=orig.length)requestAnimationFrame(scramble);
-      };
-      scramble();
+        if (frame <= orig.length) requestAnimationFrame(scramble);
+      })();
     })();
 
     /* Register service-worker if present */
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('/sw.js').catch(()=>{/* noop */});
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {/* noop */});
     }
   </script>
 </body>
