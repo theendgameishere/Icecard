@@ -1,115 +1,49 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <title data-cms-id="page_title">The Sarcastic Circus | Digital Mischief</title>
-  <meta name="description" content="Human‑AI wizardry for sites, apps & chatbots." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thesarcasticcircus.com" />  <!-- Social cards (static fallbacks) -->  <meta property="og:title"       content="The Sarcastic Circus" />
-  <meta property="og:description" content="Meet the troupe & see the acts." />
-  <meta property="og:image"       content="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" />
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://thesarcasticcircus.com" />  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="The Sarcastic Circus" />
-  <meta name="twitter:description" content="A Human‑AI three‑ring show." />
-  <meta name="twitter:image"       content="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" />  <!-- Styles -->  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- hero background injected early so it paints before external CSS loads -->
-  <style>:root{--hero-bg:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80');}</style>
-</head><body>
-  <a href="#main" class="skip-link">Skip to content</a>  <!-- ▾▾ Navigation ▾▾ -->  <header role="banner">
-    <nav role="navigation">
-      <ul>
-        <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
-        <li><a class="nav-link" href="about.html">About&nbsp;Us</a></li>
-        <li><a class="nav-link" href="services.html">Services</a></li>
-        <li><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>  <main id="main">
-    <!-- ▾▾ Hero ▾▾ -->
-    <section id="hero">
-      <div class="hero-content">
-        <h1 data-cms-id="hero_title">Digital Mischief Mastered</h1>
-        <p  data-cms-id="hero_tagline">Sites, apps & chatbots that slap (only metaphorically).</p>
-        <a href="#services-preview" class="cta" data-cms-id="hero_cta">See the Acts</a>
-      </div>
-    </section><!-- ▾▾ Services Preview ▾▾ -->
-<section id="services-preview">
-  <h2>Featured Services</h2>
-  <div class="services-grid">
-    <article class="service-card">
-      <a href="https://unsplash.com/photos/1498050108023-c5249f4df085" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Code on multiple monitors" width="600" height="400" />
-      </a>
-      <h3 data-cms-id="svc1_title">Web Development</h3>
-      <p  data-cms-id="svc1_desc">Responsive, performant & a tad sarcastic.</p>
-    </article>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Contact | The Sarcastic Circus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header><nav><ul class="nav-list">
+    <li><a class="nav-link" href="index.html">Home</a></li>
+    <li><a class="nav-link" href="about.html">About Us</a></li>
+    <li><a class="nav-link" href="services.html">Services</a></li>
+    <li><a class="nav-link" href="contact.html" aria-current="page">Contact</a></li>
+  </ul></nav></header>
 
-    <article class="service-card">
-      <a href="https://unsplash.com/photos/1518773553398-650c184e0bb3" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=600&q=80" alt="Humanoid robot holding tablet" width="600" height="400" />
-      </a>
-      <h3 data-cms-id="svc2_title">Chat Bots</h3>
-      <p  data-cms-id="svc2_desc">Bots that banter and actually convert.</p>
-    </article>
+  <main id="main" class="container" style="padding-block:var(--gap);max-width:40rem;">
+    <h1>Book Your Show</h1>
+    <p>Questions? Need a quote? Drop us a line — we’ll reply within one business day.</p>
 
-    <article class="service-card">
-      <a href="https://unsplash.com/photos/1504384308090-c894fdcc538d" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Abstract AI brain visualization" width="600" height="400" />
-      </a>
-      <h3 data-cms-id="svc3_title">AI Consulting</h3>
-      <p  data-cms-id="svc3_desc">Navigate the hype—no clown suit required.</p>
-    </article>
-  </div>
-</section>
+    <form action="https://formspree.io/f/your-id" method="POST" class="contact-form">
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
 
-<!-- ▾▾ About Preview ▾▾ -->
-<section id="about-preview">
-  <div class="about-content">
-    <a href="https://unsplash.com/photos/1519389950473-47ba0277781c" target="_blank" rel="noopener noreferrer">
-      <img data-cms-id="about_image"
-           src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
-           alt="Developer brainstorming in front of whiteboard" loading="lazy" width="800" height="533" />
-    </a>
-    <div>
-      <h2 data-cms-id="about_title">Our Philosophy</h2>
-      <p  data-cms-id="about_text">Humans + Machines > either alone. We orchestrate both like a ringmaster with an obedient robot lion.</p>
-      <a href="about.html" class="cta">Learn More</a>
-    </div>
-  </div>
-</section>
+      <label>
+        Email
+        <input type="email" name="_replyto" required>
+      </label>
 
-<!-- ▾▾ CTA Banner ▾▾ -->
-<section id="cta-banner">
-  <h2 data-cms-id="cta_title">Ready to Step Into the Ring?</h2>
-  <a  data-cms-id="cta_button" href="contact.html">Book Your Show</a>
-</section>
+      <label>
+        Message
+        <textarea name="message" rows="6" required></textarea>
+      </label>
 
-  </main>  <!-- ▾▾ Footer ▾▾ -->  <footer role="contentinfo">
-    <nav role="navigation">
-      <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="about.html">About Us</a></li>
-        <li><a class="nav-link" href="services.html">Services</a></li>
-        <li><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav><div class="social-media">
-  <a href="#" target="_blank" rel="noopener noreferrer"><img src="/icons/twitter.svg"  alt="Twitter" /></a>
-  <a href="#" target="_blank" rel="noopener noreferrer"><img src="/icons/facebook.svg" alt="Facebook" /></a>
-  <a href="#" target="_blank" rel="noopener noreferrer"><img src="/icons/instagram.svg" alt="Instagram" /></a>
-</div>
+      <!-- honeypot -->
+      <input type="text" name="_gotcha" style="display:none">
 
-<p data-cms-id="footer_disclaimer">© <span data-year></span> The Sarcastic Circus — All Jokes Reserved</p>
+      <button type="submit" class="cta" style="margin-top:1rem;">Send</button>
+    </form>
+  </main>
 
-  </footer>  <!-- Empty JSON placeholder (your CMS can replace) -->  <script id="cms-data" type="application/json">{}</script>  <!-- Minimal JS: year injection + CMS hydration -->  <script>
-    document.addEventListener('DOMContentLoaded',()=>{
-      /* year */
-      const y=document.querySelector('[data-year]'); if(y) y.textContent=new Date().getFullYear();
-      /* CMS hydrate */
-      let data={};
-      try{ data=JSON.parse(document.getElementById('cms-data').textContent||'{}'); }catch(e){}
-      document.querySelectorAll('[data-cms-id]').forEach(el=>{
-        const key=el.dataset.cmsId;
-        if(!(key in data)) return;
-        if(el.tagName==='IMG'){ el.src=data[key]; if(!el.alt) el.alt=key; }
-        else{ el.textContent=data
+  <footer style="text-align:center;padding-block:var(--gap);">
+    <p>© <script>document.write(new Date().getFullYear())</script> The Sarcastic Circus</p>
+  </footer>
+</body>
+</html>
