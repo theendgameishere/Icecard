@@ -1,4 +1,4 @@
-/* ----- Global palette & rhythm ----- */
+/* ---------- Base scale & helpers ---------- */
 :root{
   --bg:#121212;
   --text:#ffffff;
@@ -6,42 +6,22 @@
   --secondary:#00ffff;
   --shadow:rgba(0,0,0,.5);
   --radius:10px;
-  --gap:2.5rem;
-  --gap-lg:3.5rem;
+  --gap:2rem;
+  --gap-lg:3rem;
 }
-
 html{scroll-behavior:smooth;box-sizing:border-box}
 *,*::before,*::after{box-sizing:inherit}
 
-body{
-  margin:0;
-  font-family:system-ui,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-  overflow-x:hidden;
-}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
 
 img{max-width:100%;height:auto;display:block}
 
-/* ----- Containers & sections ----- */
+/* ---------- Containers & rhythm ---------- */
 .container{max-width:70rem;margin-inline:auto;padding-inline:1rem}
 section{padding-block:var(--gap)}
-@media(min-width:1024px){section{padding-block:var(--gap-lg)}}
+@media(min-width:992px){section{padding-block:var(--gap-lg)}}
 
-/* ----- CTA button ----- */
-.cta{
-  background:var(--secondary);
-  color:#000;
-  padding:.7rem 1.4rem;
-  border-radius:5px;
-  font-weight:600;
-  text-decoration:none;
-  transition:background-color .25s,box-shadow .25s,cursor .2s;
-}
-.cta:hover{background:#00cccc;box-shadow:0 4px 12px var(--shadow)}
-
-/* ----- Services grid ----- */
+/* ---------- Services grid ---------- */
 .services-grid{
   display:grid;
   gap:var(--gap);
@@ -49,40 +29,52 @@ section{padding-block:var(--gap)}
 }
 .service-card{
   background:#1a1a1a;
-  padding:1.3rem;
+  padding:1.25rem;
   border-radius:var(--radius);
-  box-shadow:0 8px 18px var(--shadow);
-  transition:transform .25s;
+  box-shadow:0 6px 14px var(--shadow);
   text-align:center;
+  transition:transform .25s;
 }
-.service-card:hover{transform:translateY(-8px)}
-.service-card h3{margin:.9rem 0 .4rem;font-size:1.25rem}
+.service-card:hover{transform:translateY(-6px)}
+.service-card h3{margin:1rem 0 .5rem;font-size:1.25rem}
 
-/* ----- About preview flex ----- */
-.about-content{
+/* ---------- About preview ---------- */
+.about-flex{
   display:flex;
   gap:var(--gap);
   align-items:center;
 }
-@media(max-width:768px){
-  .about-content{flex-direction:column}
+.about-flex img{flex:1 1 320px;border-radius:var(--radius);box-shadow:0 6px 14px var(--shadow)}
+.about-copy{flex:1}
+@media(max-width:992px){
+  .about-flex{flex-direction:column;text-align:center}
+  .about-copy{max-width:34rem}
 }
 
-/* ----- Reveal helper (if JS disabled) ----- */
-.reveal{
-  opacity:0;
-  transform:translateY(24px);
-  transition:opacity .6s ease-out,transform .6s ease-out;
+/* ---------- CTA band ---------- */
+.cta-band{
+  background:var(--primary);
+  color:#000;
+  text-align:center;
+  padding-block:var(--gap);
 }
-.reveal.visible{opacity:1;transform:none}
+.cta-band h2{margin:0 0 1rem;font-size:1.6rem}
+.cta{
+  display:inline-block;
+  background:var(--secondary);
+  color:#000;
+  padding:.65rem 1.3rem;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:background-color .25s,box-shadow .25s;
+}
+.cta:hover{background:#00cccc;box-shadow:0 4px 12px var(--shadow)}
 
-/* ----- Footer ----- */
-footer{text-align:center}
+/* ---------- Footer ---------- */
+footer{text-align:center;padding-block:1.5rem}
 
-/* ----- Motion reduction ----- */
+/* ---------- Motion reduction ---------- */
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    transition:none!important;
-    animation:none!important;
-  }
+  *,*::before,*::after{transition:none!important;animation:none!important}
 }
