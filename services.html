@@ -1,99 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-cms-id="page_title">Sarcastic Circus Services | Web, Apps, AI & More</title>
-    <meta name="description" content="Explore The Sarcastic Circus’s custom digital solutions: web development, app development, chatbot technology, and AI consulting. Absurdly brilliant, every time.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | The Sarcastic Circus</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- NAV -->
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About&nbsp;Us</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h1 data-cms-id="main_title">Our Services: Custom Digital Solutions</h1>
+  <main>
+    <!-- HERO -->
+    <section id="hero" style="
+      background:linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,.85)),
+      url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80')
+      center/cover no-repeat">
+      <div class="hero-inner">
+        <h1>What We Do</h1>
+        <p>Full-stack craftsmanship with a circus flair.</p>
+      </div>
+    </section>
 
-        <!-- Web Development Section -->
-        <section id="web-development" data-aos="fade-up">
-            <h2 data-cms-id="web_dev_title">Web Development</h2>
-            <img data-cms-id="web_dev_image" src="https://images.unsplash.com/photo-1516321313936-4cb3128700d7" alt="Clown coding a website">
-            <p data-cms-id="web_dev_description">We craft websites so dazzling, they’ll make your competitors weep into their outdated HTML. From pixel-perfect designs to lightning-fast performance, we deliver digital masterpieces that scream “hire us again.”</p>
-            <ul data-cms-id="web_dev_features">
-                <li data-cms-id="web_dev_feature_1">Responsive designs that look good on everything, even your grandma’s flip phone.</li>
-                <li data-cms-id="web_dev_feature_2">SEO optimization so Google loves you more than us (unlikely).</li>
-                <li data-cms-id="web_dev_feature_3">Custom CMS integration for when you want to change things without crying.</li>
-            </ul>
-            <p data-cms-id="web_dev_benefits">Benefits: Stand out, convert visitors, and make your brand unforgettable.</p>
-        </section>
+    <!-- SERVICE GRID -->
+    <section class="container">
+      <h2>Our Core Acts</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Web&nbsp;Development</h3>
+          <p>React, Next JS, animations, and performance budgets that won’t quit.</p>
+          <a href="contact.html" class="cta">Get a Quote</a>
+        </article>
+        <article class="service-card">
+          <h3>AI&nbsp;Chatbots</h3>
+          <p>Sales, support, onboarding — delivered with personality and ROI tracking.</p>
+          <a href="contact.html" class="cta">Start Chatting</a>
+        </article>
+        <article class="service-card">
+          <h3>AI&nbsp;Consulting</h3>
+          <p>Road-mapping, fine-tuning, and guardrails so your model behaves.</p>
+          <a href="contact.html" class="cta">Book a Call</a>
+        </article>
+      </div>
+    </section>
 
-        <!-- App Development Section -->
-        <section id="app-development" data-aos="fade-up">
-            <h2 data-cms-id="app_dev_title">App Development</h2>
-            <img data-cms-id="app_dev_image" src="https://images.unsplash.com/photo-1511551203521-1d70bb3b36b7" alt="Juggler building an app">
-            <p data-cms-id="app_dev_description">Our web apps are so smooth, they make butter jealous. Whether it’s a sleek dashboard or a game-changing tool, we build apps that users love and bugs fear.</p>
-            <ul data-cms-id="app_dev_features">
-                <li data-cms-id="app_dev_feature_1">Cross-platform compatibility for maximum reach.</li>
-                <li data-cms-id="app_dev_feature_2">Scalable architecture to handle your inevitable viral success.</li>
-                <li data-cms-id="app_dev_feature_3">User-friendly interfaces that don’t require a PhD to navigate.</li>
-            </ul>
-            <p data-cms-id="app_dev_benefits">Benefits: Engage users, boost efficiency, and flex your tech superiority.</p>
-        </section>
-
-        <!-- Chatbot Technology Section -->
-        <section id="chatbot-technology" data-aos="fade-up">
-            <h2 data-cms-id="chatbot_title">Chatbot Technology</h2>
-            <img data-cms-id="chatbot_image" src="https://images.unsplash.com/photo-1507216698-4f3eabcd2b72" alt="Ventriloquist dummy as a chatbot">
-            <p data-cms-id="chatbot_description">Our chatbots are so charming, they could convince you to buy a timeshare. From customer service to lead generation, we create bots that talk the talk and walk the walk (digitally, of course).</p>
-            <ul data-cms-id="chatbot_features">
-                <li data-cms-id="chatbot_feature_1">Natural language processing for human-like conversations.</li>
-                <li data-cms-id="chatbot_feature_2">Integration with your existing platforms (yes, even that clunky CRM).</li>
-                <li data-cms-id="chatbot_feature_3">24/7 availability to answer questions while you nap.</li>
-            </ul>
-            <p data-cms-id="chatbot_benefits">Benefits: Automate support, delight customers, and save your sanity.</p>
-        </section>
-
-        <!-- AI Consulting Section -->
-        <section id="ai-consulting" data-aos="fade-up">
-            <h2 data-cms-id="ai_consulting_title">AI Consulting</h2>
-            <img data-cms-id="ai_consulting_image" src="https://images.unsplash.com/photo-1516321165247-7a6d3e8e9363" alt="Fortune teller predicting AI trends">
-            <p data-cms-id="ai_consulting_description">AI isn’t just for sci-fi movies anymore. We’ll guide you through the AI jungle, helping you automate tasks, analyze data, and maybe even predict the future (no promises on that last one).</p>
-            <ul data-cms-id="ai_consulting_features">
-                <li data-cms-id="ai_consulting_feature_1">Tailored AI strategies for your business goals.</li>
-                <li data-cms-id="ai_consulting_feature_2">Training to empower your team to use AI like pros.</li>
-                <li data-cms-id="ai_consulting_feature_3">Ethical AI guidance so you don’t accidentally start Skynet.</li>
-            </ul>
-            <p data-cms-id="ai_consulting_benefits">Benefits: Stay ahead of the curve, save time, and impress your investors.</p>
-        </section>
-    </main>
-
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="social-media">
-            <a href="#"><img src="twitter-icon.svg" alt="Stalk us on Twitter"></a>
-            <a href="#"><img src="facebook-icon.svg" alt="Like us on Facebook"></a>
-            <a href="#"><img src="instagram-icon.svg" alt="Spy on us on Instagram"></a>
+    <!-- PACKAGES -->
+    <section class="container">
+      <h2>Packages at a Glance</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Starter</h3>
+          <ul style="text-align:left;margin:0 0 1rem;padding-left:1rem">
+            <li>Single-page site</li><li>Basic chatbot</li><li>1 week hand-off</li>
+          </ul>
+          <a href="contact.html" class="cta">From&nbsp;$2,500</a>
         </div>
-        <p data-cms-id="footer_disclaimer">Warning: Prolonged exposure to our site may cause laughter, creativity, and an urge to hire us. Proceed with caution.</p>
-    </footer>
+        <div class="service-card" style="border:2px solid var(--secondary)">
+          <h3>Growth&nbsp;(Most Popular)</h3>
+          <ul style="text-align:left;margin:0 0 1rem;padding-left:1rem">
+            <li>5-page site + CMS</li><li>Custom GPT bot</li><li>3 s LCP guarantee</li>
+          </ul>
+          <a href="contact.html" class="cta">From&nbsp;$7,500</a>
+        </div>
+        <div class="service-card">
+          <h3>Enterprise</h3>
+          <ul style="text-align:left;margin:0 0 1rem;padding-left:1rem">
+            <li>Headless + API</li><li>Multi-bot orchestration</li><li>SLA &amp; training</li>
+          </ul>
+          <a href="contact.html" class="cta">Custom Quote</a>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- CTA -->
+    <section class="cta-band">
+      <h2>Unsure which act fits?</h2>
+      <a href="contact.html" class="cta">Let’s Discuss</a>
+    </section>
+  </main>
+
+  <footer><p>&copy; <span id="y2"></span> The Sarcastic Circus</p></footer>
+  <script>document.getElementById('y2').textContent=new Date().getFullYear()</script>
 </body>
 </html>
