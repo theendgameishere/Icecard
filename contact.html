@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | The Sarcastic Circus</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    form{display:grid;gap:1rem;max-width:32rem;margin-inline:auto}
+    label{display:flex;flex-direction:column;font-weight:600;font-size:.95rem}
+    input,textarea{padding:.7rem;border-radius:6px;border:none}
+  </style>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header><nav><ul class="nav-list">
-    <li><a class="nav-link" href="index.html">Home</a></li>
-    <li><a class="nav-link" href="about.html">About Us</a></li>
-    <li><a class="nav-link" href="services.html">Services</a></li>
-    <li><a class="nav-link" href="contact.html" aria-current="page">Contact</a></li>
-  </ul></nav></header>
+  <!-- NAV -->
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About&nbsp;Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main id="main" class="container" style="padding-block:var(--gap);max-width:40rem;">
-    <h1>Book Your Show</h1>
-    <p>Questions? Need a quote? Drop us a line — we’ll reply within one business day.</p>
+  <main>
+    <!-- HERO -->
+    <section id="hero" style="
+      background:linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,.85)),
+      url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80')
+      center/cover no-repeat">
+      <div class="hero-inner">
+        <h1>Let’s Connect</h1>
+        <p>Use the form below or email <strong>hello@thesarcasticcircus.com</strong></p>
+      </div>
+    </section>
 
-    <form action="https://formspree.io/f/your-id" method="POST" class="contact-form">
-      <label>
-        Name
-        <input type="text" name="name" required>
-      </label>
+    <!-- FORM -->
+    <section class="container">
+      <form action="https://formspree.io/f/your-id" method="POST">
+        <label>Name
+          <input type="text" name="name" required>
+        </label>
 
-      <label>
-        Email
-        <input type="email" name="_replyto" required>
-      </label>
+        <label>E-mail
+          <input type="email" name="_replyto" required>
+        </label>
 
-      <label>
-        Message
-        <textarea name="message" rows="6" required></textarea>
-      </label>
+        <label>Message
+          <textarea name="message" rows="6" required></textarea>
+        </label>
 
-      <!-- honeypot -->
-      <input type="text" name="_gotcha" style="display:none">
-
-      <button type="submit" class="cta" style="margin-top:1rem;">Send</button>
-    </form>
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" class="cta" style="width:max-content;margin-inline:auto">Send Message</button>
+      </form>
+    </section>
   </main>
 
-  <footer style="text-align:center;padding-block:var(--gap);">
-    <p>© <script>document.write(new Date().getFullYear())</script> The Sarcastic Circus</p>
-  </footer>
+  <footer><p>&copy; <span id="y3"></span> The Sarcastic Circus</p></footer>
+  <script>document.getElementById('y3').textContent=new Date().getFullYear()</script>
 </body>
 </html>
